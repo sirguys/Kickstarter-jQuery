@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link href='https://icode.run/bootstrap/css/bootstrap.min.css'
+			rel='stylesheet'>
+	</head>
+
+	<body>
+		<div class="container">
+			<select id='coffee-type' class='form-control'></select>
+			<ul id='list'></ul>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script>
+			var coffee = [
+				{name:'Latte', price:110},
+				{name:'Mocha', price:125},
+				{name:'Espresso', price:100},
+				{name:'Cappuccino', price:125}
+			];
+
+
+      // show();
+      $(show); //เมื่อทุกอย่างเรียบร้อยให้เรียก function show
+      function show() {
+        for (var i = 0; i < coffee.length; i++) {
+          $('#list').append('<li>' + coffee[i].name + ' - '
+            + coffee[i].price + '</li>');
+        }
+
+      }
+
+			var i = 0;
+			while (i < coffee.length) {
+				$('#coffee-type')
+					.append('<option>'+coffee[i].name+'</option>');
+				i++;
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+
+
+  <head>
+    <meta name="name" content="content" charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  </head>
+
+
+
+  <body>
+
+
+
+    <div class="container">
+      <div class="row">
+        <p id="hi">Pleas enter your name</p>
+        <input id='name' class="form-control">
+        <button class="btn btn-info" id="go">GO</button>
+      </div>
+
+      <div class="row">
+        <select id="coffee-type">
+          <option value="">Latte</option>
+          <option value="">Mocha</option>
+          <option value="">Espresso</option>
+        </select>
+        <button class="btn btn-info" id="order-button">ORDER</button>
+        <p id="price-show">Enter your price</p>
+
+      </div>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript">
+
+
+      var coffee = [
+        {name: 'Latte', price: 110},
+        {name: 'Mocha', price: 125},
+        {name: 'Espresso', price: 300},
+        {name: 'Cappuccino', price: 125}
+      ];
+
+      // var data = {
+      //   'Latte': {name:'Latte', price:110},
+      //   'Mocha': {name:'Mocha', price:125},
+      //   'Espresso': {name:'Espresso', price:300}
+      // };
+
+
+      $('#order-button').click(showOrder);
+
+      function showOrder() {
+        var x = $('#coffee-type').val();
+        var i = 0;
+        while( i < coffee[i].length ) {
+          if( x == coffee.name ) {
+            alert("Totle is " + coffee[i].length);
+          }
+          i++
+        }
+      }
+
+
+
+
+
+
+      // $('#name').val('Sirguys');
+      // $('#go').click(clickGo);
+      //
+      // function clickGo() {
+      //   var a = $('#name').val();
+      //   $('#hi').html('Hello ' + a);
+      // }
+
+
+    </script>
+
+
+  </body>
+
+
+
+</html>

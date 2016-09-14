@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link href='https://icode.run/bootstrap/css/bootstrap.min.css'
+			rel='stylesheet'>
+	</head>
+
+	<body>
+		<div class="container">
+			<ol id="coffee"></ol>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script>
+			$.get('http://icode.run:4000/coffee').done(display); //get ข้อมูล array
+
+      function display(data) {
+
+        for(var i = 0; i < data.length; i++) {
+          $('#coffee').append('<li>' + data[i] + '</li>');
+        }
+
+      }
+
+		</script>
+	</body>
+</html>
